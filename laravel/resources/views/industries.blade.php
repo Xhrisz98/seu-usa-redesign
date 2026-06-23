@@ -6,9 +6,9 @@
 @section('content')
 <!-- Header Hero -->
 <section class="hero" style="padding: 4rem 0 2rem 0;">
-  <div class="container">
+  <div class="container reveal">
     <span class="badge">Specialized Placements</span>
-    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Specialized Practice Groups</h1>
+    <h1 style="margin-bottom: 1rem;">Specialized Practice Groups</h1>
     <p style="font-size: 1.15rem; color: var(--color-text-secondary); max-width: 800px; margin-bottom: 0;">
       Deploying highly qualified candidates customized to vertical compliance mandates, safety practices, and background screening protocols.
     </p>
@@ -20,13 +20,13 @@
   <div class="container" style="display: flex; flex-direction: column; gap: 4rem;">
     
     <!-- Practice Group 1: Construction -->
-    <div class="card-premium" id="construction" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; padding: 3rem;">
+    <div class="card-premium practice-group-card reveal" id="construction">
       <div class="sector-image" style="border-radius: 1.25rem; height: 300px;">
         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Construction Worksite" style="height: 100%; object-fit: cover;" />
         <span class="sector-badge" style="top: 1rem; left: 1rem; right: auto;">OSHA Monitored</span>
       </div>
       <div>
-        <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 1rem;">Construction & Trades</h2>
+        <h2 style="font-weight: 800; margin-bottom: 1rem;">Construction & Trades</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">
           We source and deploy heavy machinery operators, carpenters, pipe layers, surveyors, and commercial foremen. Every site deployment undergoes a safety audit to verify compliance.
         </p>
@@ -53,9 +53,9 @@
     </div>
 
     <!-- Practice Group 2: IT -->
-    <div class="card-premium" id="it" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; padding: 3rem;">
+    <div class="card-premium practice-group-card reverse reveal reveal-delay-100" id="it">
       <div>
-        <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 1rem;">Information Technology</h2>
+        <h2 style="font-weight: 800; margin-bottom: 1rem;">Information Technology</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">
           We recruit specialized IT talent to keep tech infrastructure secure and performing. Our placement system is focused on technical competency screening.
         </p>
@@ -86,13 +86,13 @@
     </div>
 
     <!-- Practice Group 3: Accounting -->
-    <div class="card-premium" id="accounting" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; padding: 3rem;">
+    <div class="card-premium practice-group-card reveal reveal-delay-200" id="accounting">
       <div class="sector-image" style="border-radius: 1.25rem; height: 300px;">
         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Executive Workspace" style="height: 100%; object-fit: cover;" />
         <span class="sector-badge" style="top: 1rem; left: 1rem; right: auto;">Background Checked</span>
       </div>
       <div>
-        <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 1rem;">Accounting & Admin Support</h2>
+        <h2 style="font-weight: 800; margin-bottom: 1rem;">Accounting & Admin Support</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">
           Placing skilled personnel for bookkeeping, corporate finance, benefits administration, and front office support. All hires complete standard background screening and references.
         </p>
@@ -119,9 +119,9 @@
     </div>
 
     <!-- Practice Group 4: Government -->
-    <div class="card-premium" id="government" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; padding: 3rem;">
+    <div class="card-premium practice-group-card reverse reveal reveal-delay-300" id="government">
       <div>
-        <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 1rem;">Government & Education</h2>
+        <h2 style="font-weight: 800; margin-bottom: 1rem;">Government & Education</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 1.25rem;">
           Providing staffing and recruitment services for municipal agencies, county offices, school districts, and institutional programs, ensuring adherence to E-Verify and security standards.
         </p>

@@ -8,7 +8,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
-      <div class="hero-content">
+      <div class="hero-content reveal">
         <span class="badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           Premium Staffing Firm
@@ -20,7 +20,7 @@
           <a href="{{ route('contact') }}?type=jobs" class="btn-pill btn-outline">Apply for Jobs</a>
         </div>
       </div>
-      <div class="hero-visuals">
+      <div class="hero-visuals reveal reveal-delay-200">
         <div class="photo-grid">
           <div class="grid-photo short">
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Professional Boardroom Meeting" />
@@ -47,13 +47,13 @@
 <!-- The SEU Advantage -->
 <section class="advantage section-padding">
   <div class="container">
-    <div class="section-header text-center">
+    <div class="section-header text-center reveal">
       <span class="badge">Why Partner With Us</span>
       <h2>The SEU Advantage</h2>
       <p>We reduce human resource liabilities, simplify recruitment workflows, and deploy high-performing professionals customized to your industrial parameters.</p>
     </div>
     <div class="advantage-grid">
-      <div class="card-premium advantage-card">
+      <div class="card-premium advantage-card reveal">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </div>
@@ -61,7 +61,7 @@
         <p>Complete payroll administration, employer-of-record services, and benefits management to offload your internal teams.</p>
       </div>
 
-      <div class="card-premium advantage-card">
+      <div class="card-premium advantage-card reveal reveal-delay-100">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
         </div>
@@ -69,7 +69,7 @@
         <p>Strict workplace hazard evaluations and OSHA compliance screening to assure a safe environment for all teams.</p>
       </div>
 
-      <div class="card-premium advantage-card">
+      <div class="card-premium advantage-card reveal reveal-delay-200">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </div>
@@ -77,7 +77,7 @@
         <p>Rigorous pre-screening verify workflows ensuring that every single placed worker is fully authorized for work.</p>
       </div>
 
-      <div class="card-premium advantage-card">
+      <div class="card-premium advantage-card reveal reveal-delay-300">
         <div class="card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
         </div>
@@ -91,14 +91,14 @@
 <!-- Specialized Practice Groups -->
 <section class="sectors section-padding">
   <div class="container">
-    <div class="section-header text-center">
+    <div class="section-header text-center reveal">
       <span class="badge">Sectors & Industries</span>
       <h2>Specialized Practice Groups</h2>
       <p>We deploy certified and vetted talent across key vertical markets, maintaining sector-specific compliance standards.</p>
     </div>
     <div class="sectors-grid">
       <!-- Card 1 -->
-      <div class="sector-card">
+      <div class="sector-card reveal">
         <div class="sector-image">
           <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" alt="Construction Worksite" />
           <span class="sector-badge">OSHA Monitored</span>
@@ -114,7 +114,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="sector-card">
+      <div class="sector-card reveal reveal-delay-100">
         <div class="sector-image">
           <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Software Development Center" />
           <span class="sector-badge accent">Pre-Screened</span>
@@ -130,7 +130,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="sector-card">
+      <div class="sector-card reveal reveal-delay-200">
         <div class="sector-image">
           <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Executive Office Meeting" />
           <span class="sector-badge">Background Checked</span>
@@ -146,7 +146,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="sector-card">
+      <div class="sector-card reveal reveal-delay-300">
         <div class="sector-image">
           <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=400&q=80" alt="Government Boardroom" />
           <span class="sector-badge accent">E-Verify Approved</span>
@@ -168,7 +168,7 @@
 <section class="consultation section-padding" id="consultation">
   <div class="container">
     <div class="consultation-grid">
-      <div class="consultation-text">
+      <div class="consultation-text reveal">
         <span class="badge" style="background: rgba(255,255,255,0.08); color: var(--color-accent);">Corporate Office</span>
         <h2>Maitland HQ Consultation</h2>
         <p>Partner with our corporate HR team. Sam Faragalla (CEO) and Rania Hanna (President) lead our Maitland office with 15+ years of recruitment expertise, matching local talent to regional and national scale enterprises.</p>
@@ -204,7 +204,7 @@
           </div>
         </div>
       </div>
-      <div class="consultation-form">
+      <div class="consultation-form reveal reveal-delay-200">
         <div class="form-card">
           <form id="b2bConsultForm" action="{{ route('contact.submit') }}" method="POST">
             @csrf

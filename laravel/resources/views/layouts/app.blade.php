@@ -49,5 +49,10 @@
 
     <!-- Footer component -->
     @include('components.footer')
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white hover:bg-amber-500 hover:text-slate-900 p-3.5 rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
   </body>
 </html>

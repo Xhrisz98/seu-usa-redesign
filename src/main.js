@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactTabs();
   parseUrlParams();
   setupFormSubmissions();
+  setupScrollAnimations();
+  setupBackToTop();
 });
 
 // 1. Mobile Menu Toggling
@@ -15,29 +17,51 @@ function setupMobileMenu() {
   if (toggleBtn && mainNav) {
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isVisible = mainNav.style.display === 'flex';
-      mainNav.style.display = isVisible ? 'none' : 'flex';
+      mainNav.classList.toggle('active');
       toggleBtn.classList.toggle('active');
+      
+      // Prevent body scrolling when mobile menu is open
+      if (mainNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        mainNav.style.display = 'none';
-        toggleBtn.classList.remove('active');
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+        if (!mainNav.contains(e.target) && e.target !== toggleBtn) {
+          mainNav.classList.remove('active');
+          toggleBtn.classList.remove('active');
+          document.body.style.overflow = '';
+        }
       }
+    });
+
+    // Close menu when clicking a nav link
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          mainNav.classList.remove('active');
+          toggleBtn.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
     });
 
     // Handle window resizing
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) {
-        mainNav.style.display = 'flex';
-      } else {
-        mainNav.style.display = 'none';
+        mainNav.classList.remove('active');
+        toggleBtn.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
 }
+
 
 // 2. Contact Page Form Tabs Toggling
 function setupContactTabs() {
@@ -184,4 +208,51 @@ function showNotification(text) {
       toast.remove();
     }, 400);
   }, 4000);
+}
+
+// 5. Scroll Animations with Intersection Observer
+function setupScrollAnimations() {
+  const reveals = document.querySelectorAll('.reveal');
+  
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    reveals.forEach(el => el.classList.add('active'));
+  }
+}
+
+// 6. Back to Top Button Behavior
+function setupBackToTop() {
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 }

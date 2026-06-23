@@ -6,9 +6,9 @@
 @section('content')
 <!-- Header Hero -->
 <section class="hero" style="padding: 4rem 0 2rem 0;">
-  <div class="container">
+  <div class="container reveal">
     <span class="badge">Get in Touch</span>
-    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Connect With An Agent</h1>
+    <h1 style="margin-bottom: 1rem;">Connect With An Agent</h1>
     <p style="font-size: 1.15rem; color: var(--color-text-secondary); max-width: 800px; margin-bottom: 0;">
       Whether you want to source premium workforce talent or submit your resume for job openings, we are ready to assist you.
     </p>
@@ -20,8 +20,8 @@
   <div class="container">
     <div class="consultation-grid" style="align-items: flex-start;">
       
-      <div>
-        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--color-text-primary);">Maitland HQ Office</h2>
+      <div class="reveal">
+        <h2 style="font-weight: 800; margin-bottom: 1.5rem; color: var(--color-text-primary);">Maitland HQ Office</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
           Our Florida headquarters oversees staffing deployments, compliance verification, client onboarding, and general payroll management. Feel free to contact us directly or book a consultation via Microsoft Teams.
         </p>
@@ -58,7 +58,7 @@
           </div>
         </div>
 
-        <div class="card-premium" style="background-color: var(--color-bg-primary);">
+        <div class="card-premium reveal reveal-delay-100" style="background-color: var(--color-bg-primary);">
           <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 700;">Schedule a Virtual Call</h3>
           <p style="font-size: 0.95rem; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
             Set up a direct alignment meeting with our founders and staffing leads through Microsoft Teams.
@@ -71,7 +71,7 @@
       </div>
 
       <!-- Interactive Contact Form -->
-      <div class="card-premium" style="background-color: var(--color-bg-primary); padding: 3rem;">
+      <div class="card-premium reveal reveal-delay-200 contact-form-container" style="background-color: var(--color-bg-primary); padding: 3rem;">
         <div style="display: flex; gap: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1.5rem; margin-bottom: 2rem;">
           <button type="button" id="tabHire" class="btn-pill btn-dark" style="flex: 1; padding: 0.6rem 1.2rem; font-size: 0.85rem;">Hire Talent (B2B)</button>
           <button type="button" id="tabApply" class="btn-pill btn-outline" style="flex: 1; padding: 0.6rem 1.2rem; font-size: 0.85rem;">Apply for Job</button>
